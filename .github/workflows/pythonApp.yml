@@ -26,12 +26,12 @@ jobs:
           pip install pylint
           brew update
           brew install graph-tool
-          brew --prefix graph-tool
-          python -c "import graph_tool"
 
       # Add path to graph-tool to PYTHONPATH
       - name: Configure PYTHONPATH
-        run: echo "PYTHONPATH=/opt/homebrew/opt/graph-tool/libexec/lib/python3.12/site-packages:\$PYTHONPATH" >> $GITHUB_ENV
+        run: ｜
+          echo "PYTHONPATH=/opt/homebrew/opt/graph-tool/libexec/lib/python3.12/site-packages:\$PYTHONPATH" >> $GITHUB_ENV
+          python -c "import graph_tool"
 
       # Run pylint 
       - name: Analysing the code with pylint
