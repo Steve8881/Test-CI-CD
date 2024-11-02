@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
 
       # Install dependencies
       - name: Install dependencies
@@ -26,6 +26,7 @@ jobs:
           pip install pylint
           brew update
           brew install graph-tool
+          python -c "import graph_tool"
 
       # Add path to graph-tool to PYTHONPATH
       - name: Configure PYTHONPATH
