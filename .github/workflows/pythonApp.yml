@@ -26,6 +26,7 @@ jobs:
           pip install pylint
           brew update
           brew install graph-tool
+          brew info graph-tool
 
       # Add path to graph-tool to PYTHONPATH
       - name: Configure PYTHONPATH
