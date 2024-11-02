@@ -30,9 +30,13 @@ jobs:
 
       # Add path to graph-tool to PYTHONPATH
       - name: Configure PYTHONPATH
-        run: ｜
-          echo "PYTHONPATH=/opt/homebrew/Cellar/graph-tool/2.79/lib/python3.12/site-packages:\$PYTHONPATH" >> $GITHUB_ENV
+        run: echo "PYTHONPATH=/opt/homebrew/Cellar/graph-tool/2.79/lib/python3.12/site-packages:\$PYTHONPATH" >> $GITHUB_ENV
 
+      - name: Verify PYTHONPATH and Test Import
+        run: |
+          echo "PYTHONPATH is set to: $PYTHONPATH"
+          python -c "import graph_tool"  # 尝试导入 graph_tool，确保路径正确
+          
       # Run pylint 
       - name: Analysing the code with pylint
         run: |
