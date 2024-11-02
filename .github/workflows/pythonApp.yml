@@ -27,6 +27,10 @@ jobs:
           brew update
           brew install graph-tool
 
+      # Add path to graph-tool to PYTHONPATH
+      - name: Configure PYTHONPATH
+        run: echo "PYTHONPATH=/opt/homebrew/opt/graph-tool/libexec/lib/python3.12/site-packages:\$PYTHONPATH" >> $GITHUB_ENV
+
       # Run pylint 
       - name: Analysing the code with pylint
         run: |
