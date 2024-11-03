@@ -36,8 +36,12 @@ jobs:
         run: |
           echo "PYTHONPATH is set to: $PYTHONPATH"
           python -c "import graph_tool"  # 尝试导入 graph_tool，确保路径正确
-          
+
       # Run pylint 
       - name: Analysing the code with pylint
         run: |
-          pylint ./
+          pylint src/
+
+      # Run tests
+
+      # 
