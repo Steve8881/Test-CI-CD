@@ -45,4 +45,4 @@ jobs:
       # Run tests
       - name: Run tests with pytest
         run: |
-          pytest
+          pytest --cov=src --cov-report=html --cov-fail-under=95 test 
