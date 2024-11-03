@@ -23,7 +23,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pycairo
           pip install pylint
+          pip install pytest-mock
           brew update
           brew install graph-tool
           brew info graph-tool
