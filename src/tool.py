@@ -79,6 +79,9 @@ def func(arg1, arg2):
 
     """
 
+    print(arg1)
+    print(arg2)
+
     gt.Graph()
 
     return True
