@@ -79,7 +79,7 @@ def func(arg1, arg2):
 
     """
 
-    gt.add_random_edges(arg1, arg2)
+    gt.Graph()
 
     return True
 

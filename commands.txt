@@ -1,0 +1,10 @@
+# Generate documentation using Sphinx
+>> cd doc
+>> sphinx-apidoc -o source ../src -f -P
+>> make html
+
+# Use Pylint to check your code smell
+>> python -m pylint src
+
+# Unit test and test coverage
+>> python -m pytest --cov=src --cov-report=html test
